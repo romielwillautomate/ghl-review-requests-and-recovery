@@ -81,10 +81,10 @@ flowchart LR
     K -->|no| C[Claude sorts the reply]
     C -->|praise| P[Short thank-you]
     C -->|complaint| Q[Task, note, Slack alert, apology]
-    C -->|question or other| H
+    C -->|question or other| O[Holding reply, hand to a person]
     C -->|opt out| D
     C -->|Claude down| F[Holding reply, run fails]
-    P & Q & H & F --> W{Quiet hours for the customer?}
+    P & Q & O & F --> W{Quiet hours for the customer?}
     W -->|yes| Y[Schedule the SMS for 8 AM]
     W -->|no| Z[Send now]
 ```
@@ -148,7 +148,7 @@ Ben keeps the same review request Ava got. Neither gets a reminder, because both
 *Service recovery needed*: Ben Ortiz (+17205550102)
 Issue: Nails left on the driveway and a loose gutter after the job
 They wrote (SMS): "The crew left nails all over my driveway and one of the gutters is loose now."
-Task for the owner, due Mon, Oct 26, 5:57 PM.
+Task for the owner, due Mon, Oct 26, 5:27 PM.
 They got: "I am so sorry about that, Ben. Mike will call you today to sort it out."
 Their review request was not changed. Do not offer anything in exchange for changing or removing a review.
 https://app.gohighlevel.com/v2/location/loc-summit-roofing/contacts/detail/c-ben
@@ -161,7 +161,7 @@ When Claude's text breaks the rules, the customer gets a fixed text instead. In 
 A complaint at 3 AM the customer's time: the owner is told at once, and the apology waits for the morning:
 
 ```
-They will get this at Mon, Oct 26, 8:00 AM their time (quiet hours): "I am sorry to hear that, Ned. Mike will call you first thing in the morning."
+They will get this at Tue, Oct 27, 8:00 AM their time (quiet hours): "I am sorry to hear that, Ned. Mike will call you first thing in the morning."
 ```
 
 The weekly digest:
@@ -170,14 +170,14 @@ The weekly digest:
 *Weekly review report*: Summit Roofing Co. (Oct 19 to Oct 26)
 Review requests sent: 8
 Reminders sent: 3
-Replies: 28 (10 praise, 5 complaints, 1 question, 6 opt out, 6 other)
+Replies: 34 (10 praise, 8 complaints, 1 question, 7 opt out, 8 other)
 Complaints:
 • Ben Ortiz: Nails left on the driveway and a loose gutter after the job
 • Ivy Nash: Leak by the chimney after the repair
 ...
-Open recovery tasks: 5
-• Pia Soto, due Sat, Oct 24, 1:57 PM (overdue)
-• Ned Ford, due Mon, Oct 26, 5:57 PM
+Open recovery tasks: 8
+• Pia Soto, due Sat, Oct 24, 1:27 PM (overdue)
+• Vic Hart, due Mon, Oct 26, 5:27 PM
 ...
 ```
 

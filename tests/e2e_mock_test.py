@@ -1499,7 +1499,7 @@ def run(r, nat):
     # ---------------------------------------------------------------- everything n8n did, for the compliance checks
     ghl_log = [e for e in LOG if e['service'] == 'ghl']
     tag_writes = [t for e in ghl_log if re.fullmatch(r'/contacts/[^/]+/tags', e['path']) for t in (e['body'] or {}).get('tags', [])]
-    r.check('No path withholds the link', 'n8n never removed a tag and never wrote a tag the GoHighLevel workflows read',
+    r.check('No path withholds the link', 'n8n never removed a tag and never wrote a tag the GoHighLevel workflows set',
             not [e for e in ghl_log if e['method'] == 'DELETE' and e['path'].endswith('/tags')] and not set(tag_writes) & NATIVE_TAGS, f'{len(tag_writes)} tags written')
     scheduled_ids = {e['response'].get('messageId') for e in ghl_log if e['path'] == '/conversations/messages' and (e['body'] or {}).get('scheduledTimestamp') and e['status'] == 200}
     deletes = [e for e in ghl_log if e['method'] == 'DELETE']

@@ -257,7 +257,7 @@ Send time cannot be saved
   PASS  tried 3 times, run fails and says the digest will not count this request  (ended at Stop: Record Failed)
 
 No path withholds the link
-  PASS  n8n never removed a tag and never wrote a tag the GoHighLevel workflows read  (41 tags written)
+  PASS  n8n never removed a tag and never wrote a tag the GoHighLevel workflows set  (41 tags written)
   PASS  the only thing n8n ever deleted was its own scheduled replies; no message from GoHighLevel was touched  (6 cancel calls)
   PASS  n8n only writes the two send-time fields, and only when GoHighLevel reports a send  (12 writes)
   PASS  no message n8n sent, in any path, contained the link or a word about reviews or ratings  (25 sends)

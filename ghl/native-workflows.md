@@ -14,7 +14,7 @@ Every customer gets the same review request with the same link, whatever they th
 - The reminder stops for anyone who replied (any reply, happy or not) or clicked the link. That is the same rule for everyone.
 - HighLevel has no "review gating" setting to switch off. Do not add a rating pre-screen page or a feedback form in front of the Google link, even though some HighLevel guides suggest routing low ratings to an internal form.
 
-n8n never changes any of this. It reads the tags below but never adds or removes them, and it never sends, repeats or withdraws the review link.
+n8n never changes any of this. It reads the tags these workflows add but never adds or removes them, and it never sends, repeats or withdraws the review link.
 
 ## Before you start
 
@@ -248,7 +248,7 @@ n8n receives:
 | `review-needs-human` | n8n | A person should answer. The assistant stays quiet |
 | `review-opted-out` | n8n | Asked to stop. DND is on for that channel |
 
-The GoHighLevel workflows only read the first five tags. n8n only adds the others. That split is what keeps the reply side from ever changing who gets the request or the reminder.
+Workflow 1, which sends the request and the reminder, only reads tags from the first five rows. n8n only adds the others. That split is what keeps the reply side from ever changing who gets the request or the reminder. (Workflow 2 skips contacts tagged `review-opted-out`, so their later messages do not reach n8n; that does not change who gets the request or the reminder.)
 
 ## Why not the built-in Send Review Request action
 

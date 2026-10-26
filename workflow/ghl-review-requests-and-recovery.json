@@ -1132,7 +1132,7 @@
         700
       ],
       "parameters": {
-        "content": "## 5. Reply, tag and alert\nOne place decides the message back, the tags, the Slack alert and whether the run fails (also when Slack refuses the alert). An SMS outside SEND_HOUR_START to SEND_HOUR_END in the customer's time zone is scheduled in GoHighLevel for the morning. Nothing here touches the review request: no tag the GoHighLevel workflows read is added or removed.",
+        "content": "## 5. Reply, tag and alert\nOne place decides the message back, the tags, the Slack alert and whether the run fails (also when Slack refuses the alert). An SMS outside SEND_HOUR_START to SEND_HOUR_END in the customer's time zone is scheduled in GoHighLevel for the morning. Nothing here touches the review request: no tag the request workflow reads is added or removed.",
         "width": 2240,
         "height": 840,
         "color": 7
